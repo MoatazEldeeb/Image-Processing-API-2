@@ -1,0 +1,50 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/build/index.js",
+  "scripts": {
+    "eslint": "eslint . --ext .js,.jsx,.ts --fix",
+    "prettier-ts": "prettier --config .prettierrc src/**/*.ts --write",
+    "prettier-js": "prettier --config .prettierrc ./build/**/*.js --write",
+    "prettier":"npm run prettier-ts && npm run prettier-js",
+    "lint": "npm run prettier && npm run eslint",
+    "build": "npx tsc",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine",
+    "start": "nodemon src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoatazEldeeb/Image-Processing-API.git"
+  },
+  "author": "MoatazEldeeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoatazEldeeb/Image-Processing-API/issues"
+  },
+  "homepage": "https://github.com/MoatazEldeeb/Image-Processing-API#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^4.0.3",
+    "@types/node": "^18.6.1",
+    "@types/sharp": "^0.30.4",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jasmine": "^4.3.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "supertest": "^6.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
